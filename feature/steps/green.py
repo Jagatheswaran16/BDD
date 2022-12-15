@@ -90,7 +90,7 @@ def step_impl(context):
 def step_impl(context):
     drp=Select(context.driver.find_element(By.XPATH,"//div[@class='wrapperTwo']//div//select" ))
     drp.select_by_visible_text("India")
-    time.sleep(1)
+
 
 
 
@@ -129,7 +129,7 @@ def step_impl(context):
     context.driver.find_element(By.XPATH, "//button[normalize-space()='Proceed']").click()
     time.sleep(2)
     a = context.driver.find_element(By.LINK_TEXT, 'Free Access to InterviewQues/ResumeAssistance/Material').text
-    time.sleep(2)
+    time.sleep(1)
     assert a == 'Free Access to InterviewQues/ResumeAssistance/Material'
     print(a)
 
