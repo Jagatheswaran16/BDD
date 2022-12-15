@@ -90,6 +90,7 @@ def step_impl(context):
 def step_impl(context):
     drp=Select(context.driver.find_element(By.XPATH,"//div[@class='wrapperTwo']//div//select" ))
     drp.select_by_visible_text("India")
+    time.sleep(1)
 
 
 
