@@ -131,7 +131,8 @@ def step_impl(context):
     a = context.driver.find_element(By.LINK_TEXT, 'Free Access to InterviewQues/ResumeAssistance/Material').text
     time.sleep(1)
     assert a == 'Free Access to InterviewQues/ResumeAssistance/Material'
-    print(a)
+
+
 
 
 
