@@ -127,7 +127,7 @@ def step_impl(context):
     context.driver.find_element(By.XPATH, "//input[@type='checkbox']").click()
     time.sleep(2)
     context.driver.find_element(By.XPATH, "//button[normalize-space()='Proceed']").click()
-    time.sleep(1)
+    time.sleep(2)
     a = context.driver.find_element(By.LINK_TEXT, 'Free Access to InterviewQues/ResumeAssistance/Material').text
     time.sleep(1)
     assert a == 'Free Access to InterviewQues/ResumeAssistance/Material'
