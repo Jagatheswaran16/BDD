@@ -86,7 +86,7 @@ def step_impl(context):
     l=POM.Cart.my_Promocode_code_sucessfull_message_should_be_displayed()
     assert l == variables.promo_verify
     POM.Cart.my_Place_order_button_is_pressed()
-    POM.country.my_country_is_selected()
+    POM.country.my_country_is_selected(variables.country_name)
     POM.country.my_check_box()
     POM.country.my_Proceed_button_is_clicked()
     a = POM.home.my_material()
