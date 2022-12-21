@@ -5,5 +5,4 @@ driver =webdriver.Chrome(executable_path='C:/Users/jagatheswaran.m/PycharmProjec
 driver.maximize_window()
 
 URL="https://rahulshettyacademy.com/seleniumPractise/#/"
-
 driver.implicitly_wait(5)
