@@ -76,9 +76,9 @@ class countrypage:
     warrning_msg= "//b[normalize-space()='Please accept Terms & Conditions - Required']"
     checkbox= "//input[@type='checkbox']"
 
-    def my_country_is_selected(self, country_name):
+    def my_country_is_selected(self, country):
         drp = Select(base.driver.find_element(By.XPATH, self.country_drp))
-        drp.select_by_visible_text("country_name")
+        drp.select_by_visible_text(country)
 
     def my_Terms_Conditions_is_not_selected(self):
         return base.driver.find_element(By.LINK_TEXT, self.tc).text
