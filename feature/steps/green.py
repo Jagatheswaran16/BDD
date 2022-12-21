@@ -80,6 +80,7 @@ def Terms_Conditions_warning_message_is_displayed(context):
     waarmsg= POM.country.my_Terms_Conditions_warning_message_is_displayed()
     assert waarmsg== variables.warrning_message
 
+
 @then(u'promocode3 is applied and country and Terms & Conditions is selected')
 def step_impl(context):
     POM.Cart.my_Promocode_is_applied(variables.promo)
