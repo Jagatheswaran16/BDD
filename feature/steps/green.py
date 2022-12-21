@@ -68,12 +68,12 @@ def country_is_selected(context):
 @when(u'Terms & Conditions is not selected')
 def Terms_Conditions_is_not_selected(context):
     terms=POM.country.my_Terms_Conditions_is_not_selected()
-    time.sleep(2)
     assert terms== variables.TC
 
 @when(u'Proceed button is clicked')
 def Proceed_button_is_clicked(context):
     POM.country.my_Proceed_button_is_clicked()
+    time.sleep(2)
 
 @then(u'Terms & Conditions warning message is displayed')
 def Terms_Conditions_warning_message_is_displayed(context):
