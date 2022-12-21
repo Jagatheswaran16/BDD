@@ -10,6 +10,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 import base
 import green
 from behave import *
+
 class homepage:
     search= '//input[@type="search"]'
     addcart_button='//button[normalize-space()="ADD TO CART"]'
