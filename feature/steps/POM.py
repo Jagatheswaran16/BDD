@@ -17,12 +17,6 @@ class homepage:
     cart= "//a[@class='cart-icon']/img"
     checkout="//button[text()='PROCEED TO CHECKOUT']"
     material= "Free Access to InterviewQues/ResumeAssistance/Material"
-    product_name = "//p[@class='product-name']"
-    promocode = '.promoCode'
-    promo_apply = '.promoBtn'
-    promo_info = ".promoInfo"
-    discount_amt = "//span[@class='discountAmt']"
-    place_order = "//button[normalize-space()='Place Order']"
     def my_search(self, Vegitable):
         base.driver.find_element(By.XPATH, self.search).send_keys(Vegitable)
         time.sleep(1)
@@ -42,7 +36,13 @@ class homepage:
 
 home=homepage()
 
-class Cart_page(homepage):
+class Cart_page:
+    product_name= "//p[@class='product-name']"
+    promocode= '.promoCode'
+    promo_apply= '.promoBtn'
+    promo_info= ".promoInfo"
+    discount_amt= "//span[@class='discountAmt']"
+    place_order= "//button[normalize-space()='Place Order']"
 
     def my_Verify_Product_name(self):
        return base.driver.find_element(By.XPATH, self.product_name).text
@@ -76,9 +76,9 @@ class countrypage:
     warrning_msg= "//b[normalize-space()='Please accept Terms & Conditions - Required']"
     checkbox= "//input[@type='checkbox']"
 
-    def my_country_is_selected(self):
+    def my_country_is_selected(self, country_name):
         drp = Select(base.driver.find_element(By.XPATH, self.country_drp))
-        drp.select_by_visible_text("India")
+        drp.select_by_visible_text("country_name")
 
     def my_Terms_Conditions_is_not_selected(self):
         return base.driver.find_element(By.LINK_TEXT, self.tc).text

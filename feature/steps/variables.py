@@ -5,3 +5,4 @@ promo_amt_verify= '43.2'
 TC= "Terms & Conditions"
 warrning_message= "Please accept Terms & Conditions - Required"
 homepage_link ="Free Access to InterviewQues/ResumeAssistance/Material"
+country_name = "United Kingdom"

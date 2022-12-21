@@ -63,7 +63,7 @@ def Place_order_button_is_pressed(context):
 
 @when(u'country is selected')
 def country_is_selected(context):
-    POM.country.my_country_is_selected()
+    POM.country.my_country_is_selected(variables.country_name)
 
 @when(u'Terms & Conditions is not selected')
 def Terms_Conditions_is_not_selected(context):
