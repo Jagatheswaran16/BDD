@@ -12,7 +12,6 @@ import variables
 import POM
 from behave import *
 
-
 @given(u'Open Greenkart website')
 def step_impl(context):
     context.driver = base.driver
