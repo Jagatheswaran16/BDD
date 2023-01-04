@@ -21,7 +21,6 @@ Feature: Product order
     And Proceed button is clicked
     Then Terms & Conditions warning message is displayed
 
-
   Scenario: verify sucessfull place order message
     Then promocode3 is applied and country and Terms & Conditions is selected
 
