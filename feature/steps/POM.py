@@ -12,27 +12,27 @@ import green
 from behave import *
 
 class homepage:
-    search= '//input[@type="search"]'
-    addcart_button='//button[normalize-space()="ADD TO CART"]'
-    cart= "//a[@class='cart-icon']/img"
-    checkout="//button[text()='PROCEED TO CHECKOUT']"
-    material= "Free Access to InterviewQues/ResumeAssistance/Material"
+    __search= '//input[@type="search"]'
+    __addcart_button='//button[normalize-space()="ADD TO CART"]'
+    __cart= "//a[@class='cart-icon']/img"
+    __checkout="//button[text()='PROCEED TO CHECKOUT']"
+    __material= "Free Access to InterviewQues/ResumeAssistance/Material"
     def my_search(self, Vegitable):
-        base.driver.find_element(By.XPATH, self.search).send_keys(Vegitable)
+        base.driver.find_element(By.XPATH, self.__search).send_keys(Vegitable)
         time.sleep(1)
     def my_Add_a_product_to_cart(self):
-        base.driver.find_element(By.XPATH, self.addcart_button).click()
+        base.driver.find_element(By.XPATH, self.__addcart_button).click()
         time.sleep(1)
     def my_Go_to_the_cart(self):
-        base.driver.find_element(By.XPATH, self.cart).click()
-        ele = base.driver.find_element(By.XPATH, self.checkout)
+        base.driver.find_element(By.XPATH, self.__cart).click()
+        ele = base.driver.find_element(By.XPATH, self.__checkout)
         time.sleep(1)
         actions = ActionChains(base.driver)
         actions.double_click(ele).perform()
         time.sleep(1)
     def my_material(self):
         time.sleep(1)
-        return base.driver.find_element(By.LINK_TEXT, self.material).text
+        return base.driver.find_element(By.LINK_TEXT, self.__material).text
 
 home=homepage()
 

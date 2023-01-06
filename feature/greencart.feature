@@ -8,6 +8,7 @@ Feature: Product order
   Scenario: Order Product in Greenkart
     Then Verify Product name
 
+
   Scenario: Promocode apply
     When   Promocode is applied
     Then   Promocode code sucessfull message should be displayed
