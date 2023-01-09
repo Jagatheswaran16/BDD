@@ -13,7 +13,6 @@ import POM
 from behave import *
 
 class Test:
-    home = POM.homepage()
 
     @given(u'Open Greenkart website')
     def step_impl(context):
@@ -22,16 +21,15 @@ class Test:
 
     @when(u'Search product name')
     def Search_product_name(context):
-        context.home.my_search(variables.veg)
-
+        POM.home.my_search(variables.veg)
 
     @when(u'Add a product to Cart')
     def Add_a_product_to_cart(context):
-        context.home.my_Add_a_product_to_cart()
+        POM.home.my_Add_a_product_to_cart()
 
     @when(u'Go to the cart')
     def Go_to_the_cart(context):
-        context.home.my_Go_to_the_cart()
+        POM.home.my_Go_to_the_cart()
 
     @then(u'Verify Product name')
     def Verify_Product_name(context):

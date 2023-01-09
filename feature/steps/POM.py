@@ -34,7 +34,7 @@ class homepage:
         time.sleep(1)
         return base.driver.find_element(By.LINK_TEXT, self.__material).text
 
-
+home=homepage()
 
 class Cart_page:
     product_name= "//p[@class='product-name']"
