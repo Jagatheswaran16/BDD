@@ -13,6 +13,7 @@ import POM
 from behave import *
 
 class Test:
+    home = POM.homepage()
 
     @given(u'Open Greenkart website')
     def step_impl(context):
@@ -21,15 +22,16 @@ class Test:
 
     @when(u'Search product name')
     def Search_product_name(context):
-        POM.home.my_search(variables.veg)
+        context.home.my_search(variables.veg)
+
 
     @when(u'Add a product to Cart')
     def Add_a_product_to_cart(context):
-        POM.home.my_Add_a_product_to_cart()
+        context.home.my_Add_a_product_to_cart()
 
     @when(u'Go to the cart')
     def Go_to_the_cart(context):
-        POM.home.my_Go_to_the_cart()
+        context.home.my_Go_to_the_cart()
 
     @then(u'Verify Product name')
     def Verify_Product_name(context):
@@ -89,7 +91,6 @@ class Test:
         POM.country.my_check_box()
         POM.country.my_Proceed_button_is_clicked()
         a = POM.home.my_material()
-
         assert a == variables.homepage_link
 
 
