@@ -33,7 +33,6 @@ class homepage:
     def my_material(self):
         time.sleep(1)
         return base.driver.find_element(By.LINK_TEXT, self.__material).text
-
 home=homepage()
 
 class Cart_page:
