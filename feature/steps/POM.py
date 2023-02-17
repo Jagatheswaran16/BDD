@@ -11,6 +11,7 @@ import base
 import green
 from behave import *
 
+
 class homepage:
     __search= '//input[@type="search"]'
     __addcart_button='//button[normalize-space()="ADD TO CART"]'
@@ -64,6 +65,9 @@ class Cart_page:
 
     def my_Place_order_button_is_pressed(self):
         base.driver.find_element(By.XPATH, self.place_order).click()
+
+    def screen_shot(self):
+        base.driver.save_screenshot("C:/Users/jagatheswaran.m/PycharmProjects/BDD/test1.png")
 
 Cart=Cart_page()
 
