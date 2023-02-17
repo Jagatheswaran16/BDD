@@ -92,6 +92,7 @@ class Test:
         POM.country.my_check_box()
         POM.country.my_Proceed_button_is_clicked()
         a = POM.home.my_material()
+
         assert a == variables.homepage_link
 
 
