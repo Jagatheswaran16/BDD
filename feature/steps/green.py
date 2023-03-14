@@ -16,8 +16,8 @@ class Test:
 
     @given(u'Open Greenkart website')
     def step_impl(context):
-        context.driver = base.driver
-        context.driver.get(base.URL)
+        driver = base.driver
+        driver.get(base.URL)
 
     @when(u'Search product name')
     def Search_product_name(context):

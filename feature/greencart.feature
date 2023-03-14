@@ -1,5 +1,5 @@
 Feature: Product order
-  Background: Produect added
+  Background: Product added
     Given Open Greenkart website
     When Search product name
     And Add a product to Cart
