@@ -11,7 +11,6 @@ import base
 import green
 from behave import *
 
-
 class homepage:
     __search= '//input[@type="search"]'
     __addcart_button='//button[normalize-space()="ADD TO CART"]'
